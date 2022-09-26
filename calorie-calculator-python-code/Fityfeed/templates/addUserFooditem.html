@@ -1,0 +1,29 @@
+{% extends 'main.html' %}
+{% load static%}
+{% block content %}
+<head>
+    <style>
+        html,body{
+            background-color:rgb(96, 222, 236);
+        }
+        form{
+            border:1px solid black;
+            margin:auto;
+            padding: 40px;
+        
+        margin-top: 20px;
+			box-shadow: 0 4px 8px 0 rgba(41, 147, 168, 0.2), 0 6px 20px 0 rgb(31, 204, 223);
+			-webkit-box-shadow: 0 4px 8px 0 rgba(74, 220, 233, 0.2), 0 6px 20px 0 rgba(96, 236, 238, 0.832);
+			-moz-box-shadow: 0 4px 8px 0 rgba(66, 223, 247, 0.846), 0 6px 20px 0 rgba(79, 160, 230, 0.873);
+			border-radius: 5px;}
+
+
+    </style>
+</head>
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+    <p class="text-info">
+    <input type="submit" class="btn btn-info" value="submit">
+</form>
+{% endblock %}
